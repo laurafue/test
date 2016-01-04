@@ -3,8 +3,9 @@
 angular.module('angular-seed', [
     'ui.router',
     //Controllers    
-    'angular-seed.landingpage.controller'  
-    
+    'angular-seed.landingpage.controller',
+    'angular-seed.core.navbar.controller',
+    'angular-seed.core.sidenav.controller',    
     ]).config(function ($stateProvider, $urlRouterProvider) {
     //Check for authentication
     console.log("loaded")
