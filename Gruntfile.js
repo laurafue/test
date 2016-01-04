@@ -68,10 +68,7 @@ module.exports = function (grunt) {
                     "bower_components/html5-boilerplate/css/normalize.css",
                     "bower_components/html5-boilerplate/css/main.css",
                     "bower_components/materialize/extras/noUiSlider/nouislider.css",
-                    "app/css/vendor/materialize.css",
-                    "bower_components/prism/themes/prism.css",
-                    "bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css",
-                    "bower_components/angular-chart.js/dist/angular-chart.css"
+                    "app/css/vendor/materialize.css"                    
                 ]
 
             },
@@ -164,18 +161,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        s3: {
-            options: {
-                region:"eu-west-1",
-                accessKeyId: "AKIAIEUVJONXOTHTKYYA",
-                secretAccessKey: "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",
-                bucket: "zencubes.io"
-            },
-            build: {
-                cwd: "dist/app",
-                src: "**"
-            }
-        }
 // grunt-open will open your browser at the project's URL
 // https://www.npmjs.org/package/grunt-open
 
@@ -212,9 +197,6 @@ module.exports = function (grunt) {
         "cssmin:vendor",
         "cssmin:app",
         "htmlclean"
-    ]);
-    grunt.registerTask("production", [
-        "s3"
     ]);
 // Creates the `server` task
     grunt.registerTask('default', [
