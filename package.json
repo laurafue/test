@@ -1,0 +1,39 @@
+{
+  "name": "C_FRONTeND",
+  "private": true,
+  "version": "0.3.0",
+  "description": "AngularJS seed project modified for RequireJS support.",
+  "repository": "https://github.com/tnajdek/angular-requirejs-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "x",
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "x",
+    "grunt-concat-sourcemap": "x",
+    "grunt-contrib-concat": "x",
+    "grunt-contrib-connect": "x",
+    "grunt-contrib-copy": "x",
+    "grunt-contrib-cssmin": "x",
+    "grunt-contrib-requirejs": "x",
+    "grunt-contrib-uglify": "x",
+    "grunt-contrib-watch": "x",
+    "grunt-htmlclean": "x",
+    "grunt-newer": "x",
+    "grunt-ng-annotate": "x",
+    "grunt-processhtml": "x",
+    "grunt-sass": "x",
+    "grunt-aws":"x",
+    "matchdep": "x"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 app",
+    "pretest": "npm install",
+    "test": "node_modules/karma/bin/karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  }
+}

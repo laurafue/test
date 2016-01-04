@@ -1,0 +1,17 @@
+{
+    "name": "angular-requirejs-seed",
+    "description": "A starter project for AngularJS",
+    "version": "0.3.0",
+    "homepage": "https://github.com/tnajdek/angular-requirejs-seed",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "1.4.x",
+        "angular-loader": "1.4.x",
+        "angular-mocks": "~1.4.x",
+        "html5-boilerplate": "~4.3.0",
+        "materialize": "0.97.1",
+        "angular-ui-router": "x",
+        "angular-animate": "x"
+    }
+}
