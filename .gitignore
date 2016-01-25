@@ -1,0 +1,10 @@
+/nbproject/private/
+nbproject
+/node_modules/
+nbproject
+app/bower_components
+bower_components
+dist
+app/config_dev.js
+app/config.js
+.sass-cache
