@@ -5,42 +5,45 @@ angular.module('angular-seed', [
     //Controllers    
     'angular-seed.landingpage.controller',
     'angular-seed.core.navbar.controller',
-    'angular-seed.core.sidenav.controller',    
-    ]).config(function ($stateProvider, $urlRouterProvider) {
+    'angular-seed.core.sidenav.controller',
+    'angular-seed.core.footer.controller',
+    //Directives
+    'angular-seed.core.navbar.directive',
+    'angular-seed.core.sidenav.directive',
+    'angular-seed.core.footer.directive',
+]).config(function($stateProvider, $urlRouterProvider) {
     //Check for authentication
     console.log("loaded")
-    // For any unmatched url, redirect to /state1
+        // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise("/");
 
     // Now set up the states
     $stateProvider
-    .state('landingpage', {
-        url: "/",
-        templateUrl: "modules/landingpage/views/landingpage.html",
-        controller: "LandingPageCtrl"
-    });
-}).config(["$locationProvider", function ($locationProvider) {
-        //$locationProvider.html5Mode(true);
-    }]).run(function ($rootScope, $state, $location,$window) {
-        $rootScope.globals = {
-            images: GLOBALS.images,
-            API: GLOBALS.API,
-            loading: false,
-            limit: 15,
-            CONFIG: {
-                headers: {
-                    'Authorization': "",
-                },
-            }
-        };        
-        $rootScope
+        .state('landingpage', {
+            url: "/",
+            templateUrl: "modules/landingpage/views/landingpage.html",
+            controller: "LandingPageCtrl"
+        });
+}).config(["$locationProvider", function($locationProvider) {
+    //$locationProvider.html5Mode(true);
+}]).run(function($rootScope, $state, $location, $window) {
+    $rootScope.globals = {
+        images: GLOBALS.images,
+        API: GLOBALS.API,
+        loading: false,
+        limit: 15,
+        CONFIG: {
+            headers: {
+                'Authorization': "",
+            },
+        }
+    };
+    $rootScope
         .$on('$stateChangeSuccess',
-            function(event){
-                if (!$window.ga){
+            function(event) {
+                if (!$window.ga) {
                     return;
                 }
                 $window.ga('send', 'pageview', { page: $location.url() });
             });
-    });
-
-
+});

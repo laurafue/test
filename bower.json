@@ -10,7 +10,7 @@
         "angular-loader": "1.4.x",
         "angular-mocks": "~1.4.x",
         "html5-boilerplate": "~4.3.0",
-        "materialize": "0.97.1",
+        "materialize": "x",
         "angular-ui-router": "x",
         "angular-animate": "x"
     }
