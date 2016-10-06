@@ -1,13 +1,20 @@
 <div ng-controller="navbarCtrl">
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo white-text">Logo</a>
+<div class="navbar-fixed">
+    <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo white-text"><img width=60px src="/images/images_project/LogoLF.png"></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link</a></li>
+                <li><a href="/#about" class="white-text">ABOUT</a></li>
+                <li><a href="" ng-click="gotoAnchor('portfolio')" class="white-text">PORTFOLIO</a></li>
+                <li><a href="" ng-click="gotoAnchor('kontakt')" class="white-text">KONTAKT</a></li>
             </ul>
+            </div>
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#" class="white-text">ABOUT</a></li>
+                <li><a href="#" class="white-text">PORTFOLIO</a></li>
+                <li><a href="#" class="white-text">KONTAKT</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </div>

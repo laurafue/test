@@ -4,6 +4,8 @@ angular.module('angular-seed', [
     'ui.router',
     //Controllers    
     'angular-seed.landingpage.controller',
+    'angular-seed.project.controller',
+    'angular-seed.impressum.controller',
     'angular-seed.core.navbar.controller',
     'angular-seed.core.sidenav.controller',
     'angular-seed.core.footer.controller',
@@ -23,6 +25,41 @@ angular.module('angular-seed', [
             url: "/",
             templateUrl: "modules/landingpage/views/landingpage.html",
             controller: "LandingPageCtrl"
+        })
+        .state('project1', {
+            url: "/project1",
+            templateUrl: "modules/project/views/project1.html",
+            controller: "projectCtrl"
+        })
+        .state('project2', {
+            url: "/project2",
+            templateUrl: "modules/project/views/project2.html",
+            controller: "projectCtrl"
+        })
+        .state('project3', {
+            url: "/project3",
+            templateUrl: "modules/project/views/project3.html",
+            controller: "projectCtrl"
+        })
+        .state('project4', {
+            url: "/project4",
+            templateUrl: "modules/project/views/project4.html",
+            controller: "projectCtrl"
+        })
+        .state('project5', {
+            url: "/project5",
+            templateUrl: "modules/project/views/project5.html",
+            controller: "projectCtrl"
+        })
+        .state('project6', {
+            url: "/project6",
+            templateUrl: "modules/project/views/project6.html",
+            controller: "projectCtrl"
+        })
+        .state('impressum', {
+            url: "/impressum",
+            templateUrl: "modules/impressum/views/impressum.html",
+            controller: "impressumCtrl"
         });
 }).config(["$locationProvider", function($locationProvider) {
     //$locationProvider.html5Mode(true);
