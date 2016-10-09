@@ -1,7 +1,7 @@
-module.exports = function (grunt) {
-// Load Grunt tasks declared in the package.json file
+module.exports = function(grunt) {
+    // Load Grunt tasks declared in the package.json file
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-// Configure Grunt
+    // Configure Grunt
     grunt.initConfig({
         //Server
         watch: {
@@ -24,8 +24,8 @@ module.exports = function (grunt) {
                         path: "dist/app"
                     }
                 },
-                middleware: function (connect, options, middlewares) {
-                    middlewares.unshift(function (req, res, next) {
+                middleware: function(connect, options, middlewares) {
+                    middlewares.unshift(function(req, res, next) {
                         res.setHeader('Access-Control-Allow-Origin', '*');
                         res.setHeader('Access-Control-Allow-Methods', '*');
                         //a console.log('foo') here is helpful to see if it runs
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                     "bower_components/html5-boilerplate/css/normalize.css",
                     "bower_components/html5-boilerplate/css/main.css",
                     "bower_components/materialize/extras/noUiSlider/nouislider.css",
-                    "app/css/vendor/materialize.css"                    
+                    "bower_components/materialize/dist/css/materialize.css",
                 ]
 
             },
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
                 cwd: 'bower_components/materialize/', // set working folder / root to copy
                 src: 'font/**', // copy all files and subfolders
                 dest: 'dist/app', // destination folder
-                expand: true           // required when using cwd
+                expand: true // required when using cwd
             },
         },
         processhtml: {
@@ -153,16 +153,16 @@ module.exports = function (grunt) {
                 dest: 'dist/app/modules/'
             }
         },
-        sass: {// Task
-            dist: {// Target               
-                files: {// Dictionary of files
+        sass: { // Task
+            dist: { // Target               
+                files: { // Dictionary of files
                     'app/css/vendor/materialize.css': 'app/css/vendor/materialize.scss', // 'destination': 'source'
 
                 }
             }
         },
-// grunt-open will open your browser at the project's URL
-// https://www.npmjs.org/package/grunt-open
+        // grunt-open will open your browser at the project's URL
+        // https://www.npmjs.org/package/grunt-open
 
     });
     grunt.registerTask("dev-watch", [
@@ -198,7 +198,7 @@ module.exports = function (grunt) {
         "cssmin:app",
         "htmlclean"
     ]);
-// Creates the `server` task
+    // Creates the `server` task
     grunt.registerTask('default', [
         "dev",
         "connect",

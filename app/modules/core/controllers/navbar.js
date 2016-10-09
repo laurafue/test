@@ -3,13 +3,11 @@ angular.module('angular-seed.core.navbar.controller', []).controller('navbarCtrl
     $scope.vm = {};
     var self = this;
     setTimeout(function() {
-        //Trigger modal elements
-        angular.element(".button-collapse").sideNav({
-            menuWidth: 300, // Default is 240
-            edge: 'left', // Choose the horizontal origin
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        });
+        angular.element('.button-collapse').sideNav({
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            });
     }, 0);
+<<<<<<< HEAD
     return {
         restrict: 'A',
         link: function(scope, $elm, attrs) {
@@ -25,6 +23,8 @@ angular.module('angular-seed.core.navbar.controller', []).controller('navbarCtrl
             });
         }
     };
+=======
+>>>>>>> 330e921ece82d6f61008baf11dc9999e59200b64
     $scope.gotoAnchor = function(x) {
         var newHash = x;
         if ($location.hash() !== newHash) {
