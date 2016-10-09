@@ -1,10 +1,10 @@
 'use strict';
-angular.module('angular-seed.core.footer.controller', []).controller('footerCtrl', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-    $scope.vm = {            
-    };
-    var self=this;
-
-
+angular.module('angular-seed.core.footer.controller', []).controller('footerCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+    $scope.vm = {};
+    var self = this;
+    $scope.openImpressumDialog = function() {
+        angular.element('#impressum').openModal();
+    }
     $scope.gotoAnchor = function(x) {
         var newHash = x;
         if ($location.hash() !== newHash) {
@@ -18,4 +18,4 @@ angular.module('angular-seed.core.footer.controller', []).controller('footerCtrl
         }
     };
 
-    }]);
+}]);

@@ -13,6 +13,12 @@ angular.module('angular-seed', [
     'angular-seed.core.navbar.directive',
     'angular-seed.core.sidenav.directive',
     'angular-seed.core.footer.directive',
+    'angular-seed.project.project1.directive',
+    'angular-seed.project.project2.directive',
+    'angular-seed.project.project3.directive',
+    'angular-seed.project.project4.directive',
+    'angular-seed.project.project5.directive',
+    'angular-seed.project.project6.directive',
 ]).config(function($stateProvider, $urlRouterProvider) {
     //Check for authentication
     console.log("loaded")
