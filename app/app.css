@@ -1,3 +1,45 @@
 .side-nav {
     left: inherit;
 }
+
+.projectcard1 {
+    background: url('images/images_project/Bog2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.projectcard2 {
+    background: url('images/images_project/Designer3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.projectcard3 {
+    background: url('images/images_project/Azubi_2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.projectcard4 {
+    background: url('images/images_project/jam2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.projectcard5 {
+    background: url('images/images_project/Flyer tsg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.projectcard6 {
+    background: url('images/images_project/KiKofe2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}

@@ -94,6 +94,12 @@ module.exports = function(grunt) {
                 dest: 'dist/app', // destination folder
                 expand: true // required when using cwd
             },
+            github: {
+                cwd: 'dist/app/',
+                src: '**', // copy all files and subfolders
+                dest: '../fuechtenkordt.com/', // destination folder
+                expand: true // required when using cwd
+            },
         },
         processhtml: {
             dist: {
@@ -173,6 +179,7 @@ module.exports = function(grunt) {
         "newer:copy:fonts",
         "newer:processhtml",
         "concat_sourcemap",
+        "copy:github",
     ]);
     grunt.registerTask("dev", [
         "sass",
@@ -183,6 +190,7 @@ module.exports = function(grunt) {
         "copy:fonts",
         "processhtml",
         "concat_sourcemap",
+        "copy:github",
     ]);
     grunt.registerTask("build", [
         "bower_concat",
@@ -196,7 +204,8 @@ module.exports = function(grunt) {
         "uglify:js",
         "cssmin:vendor",
         "cssmin:app",
-        "htmlclean"
+        "htmlclean",
+        "copy:github",
     ]);
     // Creates the `server` task
     grunt.registerTask('default', [
